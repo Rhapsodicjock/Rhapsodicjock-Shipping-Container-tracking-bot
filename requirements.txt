@@ -1,0 +1,12 @@
+playwright>=1.45.0
+pydantic>=2.8.0
+pandas>=2.2.2
+openpyxl>=3.1.5
+pyyaml>=6.0.2
+python-dotenv>=1.0.1
+tenacity>=9.0.0
+schedule>=1.2.2
+loguru>=0.7.2
+# Optional:
+# playwright-stealth
+# httpx[socks]
