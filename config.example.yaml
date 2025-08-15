@@ -1,0 +1,35 @@
+# High-level settings
+settings:
+  headless: true
+  max_concurrent_tabs: 3
+  default_timeout_ms: 90000
+  retries: 2
+  backoff_seconds: [2, 5, 10]
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  stealth: false  # set true if you have playwright-stealth
+
+# Export options
+export:
+  out_dir: "outputs"
+  formats: ["excel", "csv", "json"]
+  excel_filename: "tracking_results.xlsx"
+  csv_filename: "tracking_results.csv"
+  json_filename: "tracking_results.json"
+
+# Carrier-specific toggles
+carriers:
+  - name: "MSC"
+  - name: "PIL"
+  - name: "Maersk"
+
+# Input sources
+inputs:
+  # Either use the Excel below OR define inline list
+  excel_path: "configs/containers.example.xlsx"
+  sheet_name: "containers"
+  # Inline example (overrides excel if present)
+  # containers:
+  #   - container_no: "MEDU1234567"
+  #     carrier: "MSC"
+  #   - container_no: "TGHU7654321"
+  #     carrier: "PIL"
